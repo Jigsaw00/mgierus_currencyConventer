@@ -1,0 +1,30 @@
+<?php
+/**
+ * @var $block \MGierus\CurrencyConventer\Block\Html\Conventer
+ */
+?>
+<div id="conventer-wrapper">
+    <div id="conventer-from">
+        <label for="from">RUB:</label>
+        <input id="currency-from" type="text" name="from" title="from" placeholder="<?php echo __('From'); ?>"/>
+    </div>
+    <div id="conventer-to" style="display: none;">
+        <label for="to">PLN:</label>
+        <input id="currency-to" type="text" name="to" title="to" placeholder="<?php echo __('To'); ?>"/>
+    </div>
+    <button type="button" id="convert-button" title="Convert"><?php echo __('Convert!'); ?></button>
+</div>
+
+
+<script>
+
+    require(['jquery', 'gierusConventer', 'domReady!'], function ($, conventer) {
+
+        $('#convert-button').click(function () {
+            conventer.convert($('#currency-from'), $('#currency-to'));
+
+        });
+
+    });
+</script>
+

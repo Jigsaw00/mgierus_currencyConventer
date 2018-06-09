@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="standard">
+
+		<route frontName="conventer" id="conventer">
+			<module name="MGierus_CurrencyConventer"/>
+		</route>
+
+		<route frontName="currency" id="currency">
+			<module name="MGierus_CurrencyConventer"/>
+		</route>
+
+	</router>
+</config>
